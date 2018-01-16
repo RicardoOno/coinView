@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="coinView"> <!-- Angular sabe que precisa carregar o firstAngular -->
+    <head>
+        <base href="/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Crypto Stuffs</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="js/lib/angular.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/controllers/learning-controllers.js"></script>
+    </head>
+    <body ng-controller="LearningController">
+        <div class="container">
+            <table class="table table-dark">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Last Price (R$)</th>
+                    <th scope="col">Price (R$)</th>
+                    <th scope="col">Total (R$)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="coin in coins">
+                    <th scope="row">{{coin.name}}</th>
+                    <td>{{coin.last_price}}</td>
+                    <td>{{coin.price_brl}}</td>
+                    <td>{{coin.total}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div> <!-- fim container -->
+    </body>
+</html>
